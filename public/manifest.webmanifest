@@ -1,0 +1,13 @@
+{
+  "name": "Loan App V3",
+  "short_name": "Loan App",
+  "description": "Mobile-first loan management application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
