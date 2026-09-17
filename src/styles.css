@@ -33,18 +33,12 @@ a { color: inherit; }
 .summary-card { min-height: 112px; margin: 0; }
 .avatar { width: 56px; height: 56px; flex: 0 0 56px; border-radius: 50%; display: grid; place-items: center; background: var(--loan-primary-soft); color: var(--loan-primary); font-size: 1.25rem; font-weight: 800; }
 .success-icon { width: 64px; height: 64px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center; background: var(--loan-success-soft); color: var(--loan-success); font-size: 2rem; font-weight: 800; }
-.loan-action { min-height: 44px; border: 1px solid var(--loan-border-strong); border-radius: var(--loan-radius-md); background: var(--loan-surface); color: var(--loan-primary); font-weight: 700; cursor: pointer; transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease; }
-.loan-action:hover { background: var(--loan-primary-soft); }
-.loan-action:active { transform: scale(.98); }
-.loan-action:disabled { opacity: .5; cursor: not-allowed; transform: none; }
 .action-bar { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: min(500px, 100%); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); margin: 0; z-index: 40; background: color-mix(in srgb, var(--loan-surface) 94%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-top: 1px solid var(--loan-border); }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
 .dark body { background: var(--loan-dark-bg); color: var(--loan-dark-text); }
 .dark .loan-page, .dark .loan-content { background: var(--loan-dark-surface); color: var(--loan-dark-text); }
 .dark .loan-card { border-color: var(--loan-dark-border); box-shadow: none; }
-.dark .loan-action { background: var(--loan-dark-surface-soft); border-color: var(--loan-dark-border); color: #93c5fd; }
-.dark .loan-action:hover { background: var(--loan-dark-surface-muted); }
 .dark .action-bar { background: color-mix(in srgb, var(--loan-dark-surface) 94%, transparent); border-color: var(--loan-dark-border); }
 .dark .text-slate-500 { color: var(--loan-dark-text-muted); }
 .dark .text-slate-600 { color: var(--loan-dark-text-secondary); }
