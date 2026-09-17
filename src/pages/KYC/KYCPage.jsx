@@ -1,0 +1,3 @@
+import { Block, BlockTitle, List, ListItem } from 'konsta/react';
+import { StatusBadge } from '../../components/common/UI.jsx';
+export default function KYCPage(){return <><Block strong inset><StatusBadge tone="success">Verified</StatusBadge><h1 className="text-xl font-bold">Identity verification</h1><p className="text-slate-500">Your identity has been verified.</p></Block><BlockTitle>Verification checklist</BlockTitle><List strong inset><ListItem title="Identity document" after={<StatusBadge tone="success">Verified</StatusBadge>}/><ListItem title="Selfie verification" after={<StatusBadge tone="success">Verified</StatusBadge>}/><ListItem title="Personal information" after={<StatusBadge tone="success">Verified</StatusBadge>}/></List></>}
