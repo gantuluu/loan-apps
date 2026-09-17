@@ -1,20 +1,56 @@
 :root {
   --loan-primary: #2563eb;
-  --loan-primary-soft: #dbeafe;
+  --loan-primary-strong: #1d4ed8;
+  --loan-primary-soft: #eff6ff;
   --loan-success: #059669;
-  --loan-success-soft: #dcfce7;
+  --loan-success-strong: #047857;
+  --loan-success-soft: #ecfdf5;
   --loan-warning: #d97706;
+  --loan-warning-soft: #fffbeb;
   --loan-danger: #dc2626;
-  --loan-surface: #f8fafc;
-  --loan-app-bg: #eef2f7;
+  --loan-danger-soft: #fef2f2;
+  --loan-info: #0284c7;
+  --loan-info-soft: #f0f9ff;
+
+  --loan-app-bg: #f1f5f9;
+  --loan-surface: #ffffff;
+  --loan-surface-soft: #f8fafc;
+  --loan-surface-muted: #f1f5f9;
   --loan-text: #0f172a;
-  --loan-border: rgb(148 163 184 / 18%);
+  --loan-text-secondary: #475569;
+  --loan-text-muted: #64748b;
+  --loan-text-subtle: #94a3b8;
+  --loan-border: rgb(15 23 42 / 9%);
+  --loan-border-strong: rgb(15 23 42 / 14%);
   --loan-focus: rgb(37 99 235 / 45%);
+
+  --loan-radius-sm: 10px;
   --loan-radius-md: 14px;
   --loan-radius-lg: 20px;
+  --loan-radius-xl: 24px;
+  --loan-radius-pill: 999px;
+
+  --loan-shadow-sm: 0 1px 2px rgb(15 23 42 / 5%);
+  --loan-shadow-md: 0 8px 24px rgb(15 23 42 / 7%);
+  --loan-shadow-lg: 0 16px 40px rgb(15 23 42 / 10%);
+
+  --loan-space-1: 4px;
+  --loan-space-2: 8px;
+  --loan-space-3: 12px;
+  --loan-space-4: 16px;
+  --loan-space-5: 20px;
+  --loan-space-6: 24px;
+  --loan-space-8: 32px;
+  --loan-space-10: 40px;
+
   --loan-dark-bg: #020617;
   --loan-dark-surface: #0f172a;
+  --loan-dark-surface-soft: #111827;
+  --loan-dark-surface-muted: #1e293b;
   --loan-dark-text: #f8fafc;
+  --loan-dark-text-secondary: #cbd5e1;
+  --loan-dark-text-muted: #94a3b8;
+  --loan-dark-border: rgb(148 163 184 / 16%);
 }
 
 @theme {
@@ -22,4 +58,9 @@
   --color-brand-success: var(--loan-success);
   --color-brand-warning: var(--loan-warning);
   --color-brand-danger: var(--loan-danger);
+  --color-brand-info: var(--loan-info);
+}
+
+.dark {
+  color-scheme: dark;
 }
