@@ -1,13 +1,42 @@
+import { Bell, CircleUserRound, CreditCard, Home } from 'lucide-react';
 import { Button, Navbar, Tabbar, TabbarLink, ToolbarPane } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
 
-const items = [{ key: 'home', label: 'Home', icon: '⌂', path: '/' }, { key: 'loans', label: 'Loans', icon: '▣', path: '/loans' }, { key: 'profile', label: 'Profile', icon: '●', path: '/profile' }];
+const items = [
+  { key: 'home', label: 'Home', icon: Home, path: '/' },
+  { key: 'loans', label: 'Loans', icon: CreditCard, path: '/loans' },
+  { key: 'profile', label: 'Profile', icon: CircleUserRound, path: '/profile' },
+];
 
 export function AppHeader({ title = 'Loan App', notification = false }) {
-  return <Navbar title={title} right={notification ? <Button clear className="!min-w-0" aria-label="Notifications">🔔</Button> : null} />;
+  return (
+    <Navbar
+      title={title}
+      right={notification ? (
+        <Button clear className="!min-w-0" aria-label="Notifications">
+          <Bell size={20} strokeWidth={2} aria-hidden="true" />
+        </Button>
+      ) : null}
+    />
+  );
 }
 
 export function BottomNav({ active }) {
   const navigate = useNavigate();
-  return <Tabbar labels icons className="loan-tabbar left-0 bottom-0 fixed"><ToolbarPane>{items.map((item) => <TabbarLink key={item.key} active={active === item.key} onClick={() => navigate(item.path)} icon={<span aria-hidden="true" className="text-xl">{item.icon}</span>} label={item.label}/>)}</ToolbarPane></Tabbar>;
+
+  return (
+    <Tabbar labels icons className="loan-tabbar left-0 bottom-0 fixed">
+      <ToolbarPane>
+        {items.map(({ key, label, icon: Icon, path }) => (
+          <TabbarLink
+            key={key}
+            active={active === key}
+            onClick={() => navigate(path)}
+            icon={<Icon size={20} strokeWidth={2} aria-hidden="true" />}
+            label={label}
+          />
+        ))}
+      </ToolbarPane>
+    </Tabbar>
+  );
 }
