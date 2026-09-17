@@ -1,4 +1,4 @@
-import { Block, BlockTitle, Card, List, ListItem } from 'konsta/react';
+import { Block, BlockTitle, Button, Card, List, ListItem } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
 import { activeLoan, financialSummary, loanOffer, money, transactions, user } from '../../data/mock.js';
 import { ActiveLoanCard, LoanOfferCard } from '../../components/common/UI.jsx';
@@ -36,9 +36,9 @@ export default function HomePage() {
         <BlockTitle>Quick actions</BlockTitle>
         <Block className="!pt-0">
           <div className="grid grid-cols-3 gap-2">
-            <button className="loan-action" onClick={() => navigate('/apply')} aria-label="Apply for a loan">Apply</button>
-            <button className="loan-action" onClick={() => navigate('/repayment')} aria-label="Make a repayment">Repay</button>
-            <button className="loan-action" onClick={() => navigate('/loans')} aria-label="View loan history">History</button>
+            <Button large rounded tonal onClick={() => navigate('/apply')}>Apply</Button>
+            <Button large rounded tonal onClick={() => navigate('/repayment')}>Repay</Button>
+            <Button large rounded tonal onClick={() => navigate('/loans')}>History</Button>
           </div>
         </Block>
 
