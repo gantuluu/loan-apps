@@ -1,11 +1,37 @@
-import { Block, BlockTitle, Button, Card, List, ListInput, Progressbar, Radio, Range, Segmented, SegmentedButton } from 'konsta/react';
+import { Block } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
-import { money, user } from '../../data/mock.js';
 import { useLoanApplication } from '../../state/application/useLoanApplication.js';
+import {
+  AmountStep,
+  ApplicationProgress,
+  ApplicationSuccess,
+  PersonalStep,
+  ReviewStep,
+  SimulationStep,
+  TenorStep,
+} from '../../components/application/LoanApplicationSteps.jsx';
 
 export default function LoanApplicationPage() {
   const navigate = useNavigate();
   const { amount, setAmount, tenor, setTenor, step, submitted, monthly, next } = useLoanApplication();
-  if (submitted) return <Block strong inset className="text-center"><div className="success-icon" aria-hidden="true">✓</div><h1 className="text-xl font-bold">Application received</h1><p className="text-slate-500">Your application <strong>LN-20261017</strong> is being reviewed.</p><Button large rounded onClick={() => navigate('/status')}>View status</Button></Block>;
-  return <>{/* Application state is isolated from presentation. */}<Block className="!pt-0"><div className="flex items-center justify-between text-xs text-slate-500"><span>Step {step} of 5</span><span>{step * 20}%</span></div><Progressbar progress={step * 20} className="mt-2" /></Block>{step === 1 && <><BlockTitle>Loan amount</BlockTitle><Block strong inset><div className="text-center"><div className="text-sm text-slate-500">You request</div><div className="my-2 text-3xl font-bold">{money(amount)}</div><Range aria-label="Loan amount" value={amount} min={1000000} max={8000000} step={500000} onChange={e => setAmount(Number(e.target.value))} /></div></Block> </>}{step === 2 && <><BlockTitle>Choose tenor</BlockTitle><Block strong inset><Segmented strong rounded>{[3,6,9,12].map(v => <SegmentedButton key={v} active={tenor === v} onClick={() => setTenor(v)}>{v}m</SegmentedButton>)}</Segmented><div className="mt-6 space-y-2"><div className="flex justify-between"><span>Amount</span><strong>{money(amount)}</strong></div><div className="flex justify-between"><span>Rate</span><strong>1.2% / month</strong></div><div className="flex justify-between"><span>Tenor</span><strong>{tenor} months</strong></div></div></Block></>}{step === 3 && <><BlockTitle>Loan simulation</BlockTitle><Card header="Estimated repayment"><div className="space-y-3"><div className="flex justify-between"><span>Principal</span><strong>{money(amount)}</strong></div><div className="flex justify-between"><span>Interest</span><strong>{money(Math.round(amount * .012 * tenor))}</strong></div><div className="flex justify-between"><span>Admin fee</span><strong>{money(25000)}</strong></div><div className="border-t pt-3 flex justify-between"><span>Monthly installment</span><strong>{money(monthly)}</strong></div></div></Card></>}{step === 4 && <><BlockTitle>Personal information</BlockTitle><List strong inset><ListInput label="Full name" floatingLabel value={user.name} readOnly/><ListInput label="Phone" floatingLabel type="tel" value={user.phone} readOnly/><ListInput label="Employment" floatingLabel value="Full-time employee" readOnly/><ListInput label="Monthly income" floatingLabel value="Rp 10.000.000" readOnly/></List><BlockTitle>Verification</BlockTitle><List strong inset><ListItem title="KYC verification" after="Verified"/><ListItem title="Bank account" after={user.bank}/></List></>}{step === 5 && <><BlockTitle>Review application</BlockTitle><Card header="Application summary"><div className="space-y-3"><div className="flex justify-between"><span>Loan amount</span><strong>{money(amount)}</strong></div><div className="flex justify-between"><span>Tenor</span><strong>{tenor} months</strong></div><div className="flex justify-between"><span>Monthly installment</span><strong>{money(monthly)}</strong></div></div></Card><List strong inset><ListItem title="I confirm that the information provided is accurate" media={<Radio checked readOnly/>}/></List></>}<Block className="action-bar"><Button large rounded onClick={next}>{step === 5 ? 'Submit application' : 'Continue'}</Button></Block></>;
+
+  if (submitted) return <ApplicationSuccess onStatus={() => navigate('/status')} />;
+
+  return (
+    <>
+      <ApplicationProgress step={step} />
+
+      {step === 1 && <AmountStep amount={amount} setAmount={setAmount} />}
+      {step === 2 && <TenorStep amount={amount} tenor={tenor} setTenor={setTenor} />}
+      {step === 3 && <SimulationStep amount={amount} tenor={tenor} monthly={monthly} />}
+      {step === 4 && <PersonalStep />}
+      {step === 5 && <ReviewStep amount={amount} tenor={tenor} monthly={monthly} />}
+
+      <Block className="action-bar">
+        <button className="loan-primary-action" type="button" onClick={next}>
+          {step === 5 ? 'Submit application' : 'Continue'}
+        </button>
+      </Block>
+    </>
+  );
 }
