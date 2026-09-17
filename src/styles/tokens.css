@@ -1,0 +1,25 @@
+:root {
+  --loan-primary: #2563eb;
+  --loan-primary-soft: #dbeafe;
+  --loan-success: #059669;
+  --loan-success-soft: #dcfce7;
+  --loan-warning: #d97706;
+  --loan-danger: #dc2626;
+  --loan-surface: #f8fafc;
+  --loan-app-bg: #eef2f7;
+  --loan-text: #0f172a;
+  --loan-border: rgb(148 163 184 / 18%);
+  --loan-focus: rgb(37 99 235 / 45%);
+  --loan-radius-md: 14px;
+  --loan-radius-lg: 20px;
+  --loan-dark-bg: #020617;
+  --loan-dark-surface: #0f172a;
+  --loan-dark-text: #f8fafc;
+}
+
+@theme {
+  --color-brand-primary: var(--loan-primary);
+  --color-brand-success: var(--loan-success);
+  --color-brand-warning: var(--loan-warning);
+  --color-brand-danger: var(--loan-danger);
+}
