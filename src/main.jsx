@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { App as KonstaApp } from 'konsta/react';
 import App from './app/App.jsx';
-import { ThemeProvider, useTheme } from './hooks/useTheme.js';
+import { ThemeProvider, useTheme } from './hooks/useTheme.jsx';
 import './styles.css';
 
 function Root() {
