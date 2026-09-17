@@ -1,4 +1,4 @@
-import { Block } from 'konsta/react';
+import { Block, Button } from 'konsta/react';
 import { useNavigate } from 'react-router-dom';
 import { useLoanApplication } from '../../state/application/useLoanApplication.js';
 import {
@@ -20,17 +20,13 @@ export default function LoanApplicationPage() {
   return (
     <>
       <ApplicationProgress step={step} />
-
       {step === 1 && <AmountStep amount={amount} setAmount={setAmount} />}
       {step === 2 && <TenorStep amount={amount} tenor={tenor} setTenor={setTenor} />}
       {step === 3 && <SimulationStep amount={amount} tenor={tenor} monthly={monthly} />}
       {step === 4 && <PersonalStep />}
       {step === 5 && <ReviewStep amount={amount} tenor={tenor} monthly={monthly} />}
-
       <Block className="action-bar">
-        <button className="loan-primary-action" type="button" onClick={next}>
-          {step === 5 ? 'Submit application' : 'Continue'}
-        </button>
+        <Button large rounded onClick={next}>{step === 5 ? 'Submit application' : 'Continue'}</Button>
       </Block>
     </>
   );
