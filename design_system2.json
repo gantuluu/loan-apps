@@ -1,0 +1,1312 @@
+{
+  "version": "1.0.0",
+  "name": "CIMB CashPlus Mobile UI/UX Design System",
+  "description": "Complete mobile-only UI/UX design system for a CIMB CashPlus personal loan application and account management experience.",
+  "platform": "mobile",
+  "framework": "React",
+  "language": "TypeScript",
+  "bundler": "Vite",
+  "design_reference": {
+    "brand": "CIMB",
+    "product": "Cash Plus Personal Loan",
+    "market": "Malaysia",
+    "visual_direction": [
+      "professional",
+      "financial",
+      "clean",
+      "structured",
+      "trustworthy",
+      "high_readability",
+      "mobile_first"
+    ],
+    "visual_identity": {
+      "primary_color": "#C8102E",
+      "background": "white",
+      "surface": "white",
+      "content_style": "clear financial information hierarchy",
+      "action_style": "prominent primary actions",
+      "form_style": "simple and highly readable"
+    }
+  },
+  "global_layout": {
+    "html": {
+      "width": "100%",
+      "height": "100%"
+    },
+    "body": {
+      "width": "100%",
+      "height": "100%",
+      "margin": "0",
+      "overflow": "hidden"
+    },
+    "#root": {
+      "width": "100%",
+      "max_width": "500px",
+      "height": "100%",
+      "margin": "0 auto",
+      "position": "relative",
+      "display": "flex",
+      "flex_direction": "column",
+      "overflow": "hidden",
+      "min_height": "0"
+    },
+    "main": {
+      "flex": "1 1 auto",
+      "min_height": "0",
+      "overflow_y": "auto",
+      "overflow_x": "hidden",
+      "WebkitOverflowScrolling": "touch"
+    }
+  },
+  "colors": {
+    "primary": "#C8102E",
+    "primary_dark": "#A50D25",
+    "primary_light": "#FDECEF",
+    "primary_hover": "#B20E29",
+    "secondary": "#1A1A1A",
+    "secondary_light": "#4A4A4A",
+    "background": "#F6F6F6",
+    "surface": "#FFFFFF",
+    "surface_secondary": "#FAFAFA",
+    "text": "#1A1A1A",
+    "text_secondary": "#5F6368",
+    "text_muted": "#8A8A8A",
+    "text_inverse": "#FFFFFF",
+    "border": "#E1E1E1",
+    "border_light": "#EEEEEE",
+    "divider": "#EAEAEA",
+    "success": "#16833B",
+    "success_light": "#EAF7EE",
+    "warning": "#C77700",
+    "warning_light": "#FFF4E5",
+    "error": "#D93025",
+    "error_light": "#FDECEA",
+    "info": "#1769AA",
+    "info_light": "#EAF3FA",
+    "overlay": "rgba(0, 0, 0, 0.45)",
+    "disabled_background": "#EEEEEE",
+    "disabled_text": "#999999"
+  },
+  "css_variables": {
+    "--color-primary": "#C8102E",
+    "--color-primary-dark": "#A50D25",
+    "--color-primary-light": "#FDECEF",
+    "--color-secondary": "#1A1A1A",
+    "--color-background": "#F6F6F6",
+    "--color-surface": "#FFFFFF",
+    "--color-text": "#1A1A1A",
+    "--color-text-secondary": "#5F6368",
+    "--color-text-muted": "#8A8A8A",
+    "--color-text-inverse": "#FFFFFF",
+    "--color-border": "#E1E1E1",
+    "--color-border-light": "#EEEEEE",
+    "--color-divider": "#EAEAEA",
+    "--color-success": "#16833B",
+    "--color-warning": "#C77700",
+    "--color-error": "#D93025",
+    "--color-info": "#1769AA",
+    "--color-overlay": "rgba(0, 0, 0, 0.45)",
+    "--color-surface-secondary": "#FAFAFA",
+    "--color-success-light": "#EAF7EE",
+    "--color-warning-light": "#FFF4E5",
+    "--color-error-light": "#FDECEA",
+    "--color-info-light": "#EAF3FA",
+    "--color-disabled-background": "#EEEEEE",
+    "--color-disabled-text": "#999999",
+    "--radius-none": "0px",
+    "--radius-small": "6px",
+    "--radius-medium": "10px",
+    "--radius-large": "14px",
+    "--radius-xlarge": "18px",
+    "--radius-pill": "999px",
+    "--shadow-none": "none",
+    "--shadow-card": "0 1px 4px rgba(0, 0, 0, 0.08)",
+    "--shadow-elevated": "0 4px 16px rgba(0, 0, 0, 0.12)",
+    "--shadow-modal": "0 12px 40px rgba(0, 0, 0, 0.20)",
+    "--border-default": "1px solid var(--color-border)",
+    "--border-light": "1px solid var(--color-border-light)",
+    "--border-primary": "1px solid var(--color-primary)",
+    "--border-divider": "1px solid var(--color-divider)"
+  },
+  "typography": {
+    "font_family": {
+      "primary": "Arial, Helvetica, sans-serif",
+      "fallback": "sans-serif"
+    },
+    "heading": {
+      "h1": {
+        "font_size": "28px",
+        "line_height": "1.2",
+        "font_weight": "700",
+        "letter_spacing": "-0.4px"
+      },
+      "h2": {
+        "font_size": "22px",
+        "line_height": "1.25",
+        "font_weight": "700"
+      },
+      "h3": {
+        "font_size": "18px",
+        "line_height": "1.3",
+        "font_weight": "700"
+      },
+      "h4": {
+        "font_size": "16px",
+        "line_height": "1.35",
+        "font_weight": "700"
+      }
+    },
+    "body": {
+      "large": {
+        "font_size": "16px",
+        "line_height": "1.5",
+        "font_weight": "400"
+      },
+      "medium": {
+        "font_size": "14px",
+        "line_height": "1.5",
+        "font_weight": "400"
+      },
+      "small": {
+        "font_size": "12px",
+        "line_height": "1.45",
+        "font_weight": "400"
+      }
+    },
+    "label": {
+      "font_size": "13px",
+      "line_height": "1.4",
+      "font_weight": "600"
+    },
+    "caption": {
+      "font_size": "11px",
+      "line_height": "1.4",
+      "font_weight": "400"
+    },
+    "currency": {
+      "font_size": "24px",
+      "line_height": "1.2",
+      "font_weight": "700"
+    },
+    "loan_amount": {
+      "font_size": "28px",
+      "line_height": "1.2",
+      "font_weight": "700"
+    }
+  },
+  "spacing": {
+    "0": "0px",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "7": "28px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px"
+  },
+  "radius": {
+    "none": "0px",
+    "small": "6px",
+    "medium": "10px",
+    "large": "14px",
+    "xlarge": "18px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "none": "none",
+    "card": "0 1px 4px rgba(0, 0, 0, 0.08)",
+    "elevated": "0 4px 16px rgba(0, 0, 0, 0.12)",
+    "modal": "0 12px 40px rgba(0, 0, 0, 0.20)"
+  },
+  "border": {
+    "default": "1px solid var(--color-border)",
+    "light": "1px solid var(--color-border-light)",
+    "primary": "1px solid var(--color-primary)",
+    "divider": "1px solid var(--color-divider)"
+  },
+  "page": {
+    "background": "var(--color-background)",
+    "padding_x": "16px",
+    "padding_top": "16px",
+    "padding_bottom": "24px",
+    "content_gap": "16px"
+  },
+  "header": {
+    "height": "56px",
+    "padding_x": "16px",
+    "background": "var(--color-surface)",
+    "border_bottom": "var(--border-light)",
+    "display": "flex",
+    "align_items": "center",
+    "justify_content": "space-between",
+    "position": "relative",
+    "z_index": 20,
+    "logo": {
+      "width": "auto",
+      "height": "28px"
+    },
+    "title": {
+      "font_size": "18px",
+      "font_weight": "700"
+    },
+    "icon_button": {
+      "size": "40px",
+      "border_radius": "var(--radius-pill)",
+      "background": "transparent"
+    }
+  },
+  "bottom_navigation": {
+    "height": "64px",
+    "padding": "6px 8px",
+    "background": "var(--color-surface)",
+    "border_top": "var(--border-light)",
+    "display": "grid",
+    "grid_template_columns": "repeat(4, 1fr)",
+    "position": "relative",
+    "z_index": 30,
+    "item": {
+      "display": "flex",
+      "flex_direction": "column",
+      "align_items": "center",
+      "justify_content": "center",
+      "gap": "3px",
+      "font_size": "11px",
+      "color": "var(--color-text-secondary)",
+      "min_height": "44px"
+    },
+    "active_item": {
+      "color": "var(--color-primary)",
+      "font_weight": "700"
+    }
+  },
+  "card": {
+    "background": "var(--color-surface)",
+    "border": "var(--border-light)",
+    "border_radius": "var(--radius-large)",
+    "padding": "16px",
+    "box_shadow": "var(--shadow-card)"
+  },
+  "hero_card": {
+    "background": "var(--color-primary)",
+    "color": "var(--color-text-inverse)",
+    "border_radius": "var(--radius-large)",
+    "padding": "20px",
+    "box_shadow": "var(--shadow-card)"
+  },
+  "loan_summary_card": {
+    "extends": "card",
+    "sections": [
+      "status",
+      "loan_amount",
+      "monthly_installment",
+      "tenure",
+      "progress"
+    ],
+    "amount": {
+      "font_size": "28px",
+      "font_weight": "700"
+    },
+    "installment": {
+      "font_size": "18px",
+      "font_weight": "700"
+    }
+  },
+  "section": {
+    "display": "flex",
+    "flex_direction": "column",
+    "gap": "12px",
+    "margin_bottom": "20px",
+    "header": {
+      "display": "flex",
+      "align_items": "center",
+      "justify_content": "space-between"
+    },
+    "title": {
+      "font_size": "16px",
+      "font_weight": "700"
+    },
+    "subtitle": {
+      "font_size": "13px",
+      "color": "var(--color-text-secondary)"
+    }
+  },
+  "form": {
+    "display": "flex",
+    "flex_direction": "column",
+    "gap": "16px",
+    "field": {
+      "display": "flex",
+      "flex_direction": "column",
+      "gap": "6px"
+    },
+    "label": {
+      "font_size": "13px",
+      "font_weight": "600",
+      "color": "var(--color-text)"
+    },
+    "input": {
+      "height": "48px",
+      "padding": "0 14px",
+      "border": "1px solid var(--color-border)",
+      "border_radius": "var(--radius-medium)",
+      "background": "var(--color-surface)",
+      "font_size": "16px",
+      "outline": "none"
+    },
+    "input_focus": {
+      "border_color": "var(--color-primary)",
+      "box_shadow": "0 0 0 2px var(--color-primary-light)"
+    },
+    "input_error": {
+      "border_color": "var(--color-error)",
+      "box_shadow": "0 0 0 2px var(--color-error-light)"
+    },
+    "textarea": {
+      "min_height": "100px",
+      "padding": "12px 14px",
+      "border": "1px solid var(--color-border)",
+      "border_radius": "var(--radius-medium)",
+      "font_size": "16px",
+      "resize": "vertical"
+    },
+    "select": {
+      "height": "48px",
+      "padding": "0 14px",
+      "border": "1px solid var(--color-border)",
+      "border_radius": "var(--radius-medium)",
+      "background": "var(--color-surface)",
+      "font_size": "16px"
+    },
+    "helper_text": {
+      "font_size": "11px",
+      "color": "var(--color-text-secondary)"
+    },
+    "error_text": {
+      "font_size": "11px",
+      "color": "var(--color-error)"
+    }
+  },
+  "button": {
+    "base": {
+      "height": "48px",
+      "padding": "0 20px",
+      "border_radius": "var(--radius-medium)",
+      "font_size": "15px",
+      "font_weight": "700",
+      "display": "inline-flex",
+      "align_items": "center",
+      "justify_content": "center",
+      "gap": "8px",
+      "cursor": "pointer",
+      "min_width": "44px"
+    },
+    "primary": {
+      "background": "var(--color-primary)",
+      "color": "var(--color-text-inverse)",
+      "border": "none"
+    },
+    "primary_pressed": {
+      "background": "var(--color-primary-dark)"
+    },
+    "secondary": {
+      "background": "var(--color-surface)",
+      "color": "var(--color-primary)",
+      "border": "var(--border-primary)"
+    },
+    "text": {
+      "background": "transparent",
+      "color": "var(--color-primary)",
+      "border": "none"
+    },
+    "disabled": {
+      "opacity": "0.5",
+      "cursor": "not-allowed"
+    },
+    "full_width": {
+      "width": "100%"
+    }
+  },
+  "status": {
+    "base": {
+      "display": "inline-flex",
+      "align_items": "center",
+      "gap": "6px",
+      "padding": "5px 9px",
+      "border_radius": "var(--radius-pill)",
+      "font_size": "11px",
+      "font_weight": "600"
+    },
+    "active": {
+      "background": "var(--color-success-light)",
+      "color": "var(--color-success)"
+    },
+    "pending": {
+      "background": "var(--color-warning-light)",
+      "color": "var(--color-warning)"
+    },
+    "failed": {
+      "background": "var(--color-error-light)",
+      "color": "var(--color-error)"
+    },
+    "verified": {
+      "background": "var(--color-success-light)",
+      "color": "var(--color-success)"
+    },
+    "inactive": {
+      "background": "var(--color-surface-secondary)",
+      "color": "var(--color-text-secondary)"
+    }
+  },
+  "list": {
+    "item": {
+      "min_height": "56px",
+      "display": "flex",
+      "align_items": "center",
+      "gap": "12px",
+      "padding": "12px 0",
+      "border_bottom": "var(--border-light)"
+    }
+  },
+  "avatar": {
+    "small": "36px",
+    "medium": "44px",
+    "large": "64px",
+    "border_radius": "50%",
+    "background": "var(--color-primary-light)",
+    "object_fit": "cover"
+  },
+  "icon": {
+    "small": "16px",
+    "medium": "20px",
+    "large": "24px",
+    "stroke_width": "2"
+  },
+  "bill_card": {
+    "extends": "card",
+    "layout": "vertical",
+    "gap": "12px",
+    "header": {
+      "display": "flex",
+      "justify_content": "space-between",
+      "align_items": "center"
+    },
+    "amount": {
+      "font_size": "22px",
+      "font_weight": "700"
+    },
+    "payment_method": {
+      "border": "var(--border-light)",
+      "border_radius": "var(--radius-medium)",
+      "padding": "12px"
+    }
+  },
+  "kyc": {
+    "status_card": {
+      "extends": "card",
+      "display": "flex",
+      "align_items": "center",
+      "gap": "12px"
+    },
+    "document_card": {
+      "extends": "card",
+      "padding": "12px"
+    }
+  },
+  "admin": {
+    "background": "#F4F4F4",
+    "overview_grid": {
+      "display": "grid",
+      "grid_template_columns": "repeat(2, minmax(0, 1fr))",
+      "gap": "12px"
+    },
+    "stat_card": {
+      "background": "var(--color-surface)",
+      "border": "var(--border-light)",
+      "border_radius": "var(--radius-medium)",
+      "padding": "14px"
+    }
+  },
+  "overlay": {
+    "backdrop": {
+      "position": "fixed",
+      "inset": "0",
+      "background": "var(--color-overlay)",
+      "z_index": 100
+    },
+    "modal": {
+      "position": "relative",
+      "width": "calc(100% - 32px)",
+      "max_width": "460px",
+      "margin": "auto",
+      "background": "var(--color-surface)",
+      "border_radius": "var(--radius-xlarge)",
+      "padding": "20px",
+      "box_shadow": "var(--shadow-modal)"
+    },
+    "bottom_sheet": {
+      "position": "absolute",
+      "bottom": "0",
+      "left": "0",
+      "right": "0",
+      "background": "var(--color-surface)",
+      "border_radius": "20px 20px 0 0",
+      "padding": "20px",
+      "max_height": "90%",
+      "overflow_y": "auto"
+    },
+    "toast": {
+      "position": "absolute",
+      "left": "16px",
+      "right": "16px",
+      "bottom": "80px",
+      "z_index": 120
+    },
+    "dropdown": {
+      "background": "var(--color-surface)",
+      "border": "var(--border-light)",
+      "border_radius": "var(--radius-medium)",
+      "box_shadow": "var(--shadow-elevated)",
+      "z_index": 110
+    }
+  },
+  "loading": {
+    "skeleton": {
+      "background": "#E9E9E9",
+      "border_radius": "var(--radius-small)"
+    },
+    "spinner": {
+      "size": "24px",
+      "border_width": "3px"
+    },
+    "page_loader": {
+      "display": "flex",
+      "align_items": "center",
+      "justify_content": "center",
+      "min_height": "160px"
+    }
+  },
+  "responsive": {
+    "mobile": {
+      "max_width": "500px",
+      "layout": "single-column"
+    },
+    "desktop": {
+      "behavior": "preserve-mobile-layout",
+      "container_max_width": "500px",
+      "margin": "0 auto"
+    }
+  },
+  "component_architecture": {
+    "root": "App",
+    "hierarchy": [
+      "App",
+      "Screen",
+      "Layout",
+      "Header / Content",
+      "View",
+      "Section",
+      "Block",
+      "Component",
+      "Element",
+      "Icon"
+    ],
+    "application_structure": {
+      "App": [
+        "AppProvider",
+        "SplashScreen",
+        "Auth",
+        "AppLayout",
+        "AdminScreen",
+        "OverlayProvider"
+      ],
+      "AppLayout": [
+        "AppHeader",
+        "MainContent",
+        "BottomNavigation"
+      ],
+      "MainContent": [
+        "HomePage",
+        "LoanPage",
+        "BillsFullPage",
+        "ProfilePage",
+        "KycFullPage"
+      ]
+    },
+    "hierarchy_source": "architecture.canonical"
+  },
+  "navigation": {
+    "customer": [
+      {
+        "label": "Home",
+        "icon": "home"
+      },
+      {
+        "label": "Loan",
+        "icon": "wallet"
+      },
+      {
+        "label": "Bills",
+        "icon": "receipt"
+      },
+      {
+        "label": "Profile",
+        "icon": "user"
+      }
+    ],
+    "admin": [
+      {
+        "label": "Overview",
+        "icon": "dashboard"
+      },
+      {
+        "label": "Users",
+        "icon": "users"
+      },
+      {
+        "label": "KYC",
+        "icon": "shield-check"
+      },
+      {
+        "label": "Loan",
+        "icon": "wallet"
+      },
+      {
+        "label": "Bills",
+        "icon": "receipt"
+      }
+    ]
+  },
+  "data_display": {
+    "currency": {
+      "currency": "MYR",
+      "symbol": "RM",
+      "locale": "en-MY",
+      "decimal_places": 2
+    },
+    "date": {
+      "locale": "en-MY",
+      "format": "DD MMM YYYY"
+    },
+    "phone": {
+      "country": "MY",
+      "prefix": "+60"
+    },
+    "number": {
+      "locale": "en-MY"
+    }
+  },
+  "accessibility": {
+    "minimum_touch_target": "44px",
+    "focus_visible": true,
+    "keyboard_navigation": true,
+    "semantic_html": true,
+    "aria_labels": true,
+    "color_only_status": false,
+    "form_labels_required": true
+  },
+  "interaction": {
+    "transition": "150ms ease",
+    "button_feedback": true,
+    "input_feedback": true,
+    "loading_feedback": true,
+    "error_feedback": true,
+    "focus_feedback": true,
+    "disabled_feedback": true
+  },
+  "security_ui_rules": {
+    "password": {
+      "display": "masked",
+      "persist": false,
+      "local_storage": false,
+      "logs": false
+    },
+    "pin": {
+      "display": "masked",
+      "persist": false,
+      "local_storage": false,
+      "logs": false
+    },
+    "mykad_number": {
+      "display": "masked_when_appropriate"
+    },
+    "bank_account_number": {
+      "display": "masked_when_appropriate"
+    }
+  },
+  "implementation_rules": {
+    "mobile_only": true,
+    "max_width": "500px",
+    "center_on_large_screen": true,
+    "root_display": "flex",
+    "root_flex_direction": "column",
+    "root_height": "100%",
+    "root_overflow": "hidden",
+    "main_scroll": "vertical",
+    "horizontal_scroll": false,
+    "root_contract": {
+      "source_of_truth": "global_layout.#root",
+      "direct_properties_required": [
+        "width",
+        "max_width",
+        "height",
+        "min_height",
+        "margin",
+        "position",
+        "display",
+        "flex_direction",
+        "overflow"
+      ],
+      "forbid_duplicate_root_layout": true,
+      "forbid_viewport_height_units": [
+        "100vh",
+        "100dvh",
+        "100svh",
+        "100lvh"
+      ]
+    },
+    "no_desktop_redesign": true,
+    "preserve_blueprint_fields": true,
+    "preserve_api_field_names": true,
+    "no_unrequested_features": true,
+    "no_unrequested_sections": true,
+    "no_field_renaming": true,
+    "no_mock_data": true,
+    "no_fake_api": true,
+    "production_ready": true
+  },
+  "app": {
+    "name": "CIMB CashPlus",
+    "version": "1.0.1",
+    "framework": "React",
+    "bundler": "Vite",
+    "language": "TypeScript",
+    "architecture": "architecture.canonical"
+  },
+  "backend": {
+    "provider": "Supabase",
+    "schema": "public",
+    "table": "cimb_users",
+    "primary_key": "phone"
+  },
+  "api": {
+    "users": {
+      "service": "cimb-users",
+      "base_url": "https://oszqantvugvbvydlizix.supabase.co/functions/v1/cimb-users",
+      "verify_jwt": false,
+      "authentication": "none",
+      "authorization": "none",
+      "cors": {
+        "allow_origin": "*",
+        "methods": [
+          "GET",
+          "POST",
+          "PATCH",
+          "OPTIONS"
+        ]
+      },
+      "endpoints": {
+        "root": {
+          "method": "GET",
+          "path": "/",
+          "query": {
+            "role": {
+              "type": "string",
+              "optional": true,
+              "allowed": [
+                "customer",
+                "admin"
+              ]
+            }
+          }
+        },
+        "kyc": {
+          "get": {
+            "method": "GET",
+            "path": "/kyc",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          },
+          "create_or_update": {
+            "methods": [
+              "POST",
+              "PATCH"
+            ],
+            "path": "/kyc",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          }
+        },
+        "bank": {
+          "get": {
+            "method": "GET",
+            "path": "/bank",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          },
+          "create_or_update": {
+            "methods": [
+              "POST",
+              "PATCH"
+            ],
+            "path": "/bank",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          }
+        },
+        "loan": {
+          "get": {
+            "method": "GET",
+            "path": "/loan",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          },
+          "create_or_update": {
+            "methods": [
+              "POST",
+              "PATCH"
+            ],
+            "path": "/loan",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          }
+        },
+        "bills": {
+          "get_list": {
+            "method": "GET",
+            "path": "/bills",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          },
+          "get_one": {
+            "method": "GET",
+            "path": "/bills",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              },
+              "bill_id": {
+                "type": "string",
+                "required": true
+              }
+            }
+          },
+          "create": {
+            "method": "POST",
+            "path": "/bills",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              }
+            }
+          },
+          "update": {
+            "method": "PATCH",
+            "path": "/bills",
+            "query": {
+              "phone": {
+                "type": "string",
+                "required": true
+              },
+              "bill_id": {
+                "type": "string",
+                "required": false,
+                "alternative": "body.bill_id"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "database": {
+    "table": "cimb_users",
+    "columns": {
+      "phone": "text",
+      "email": "text|null",
+      "name": "text|null",
+      "role": "text|null",
+      "balance": "number|null",
+      "created_at": "string|null",
+      "updated_at": "string|null",
+      "pin": "string|null",
+      "password": "string|null",
+      "avatar": "string|null",
+      "kyc_status": "string|null",
+      "kyc_is_verified": "boolean|null",
+      "kyc_address_line": "string|null",
+      "kyc_city": "string|null",
+      "kyc_state": "string|null",
+      "kyc_postcode": "string|null",
+      "kyc_country": "string|null",
+      "kyc_identity_full_name": "string|null",
+      "kyc_identity_gender": "string|null",
+      "kyc_identity_nationality": "string|null",
+      "kyc_identity_id_type": "string|null",
+      "kyc_identity_mykad_number": "string|null",
+      "kyc_identity_date_of_birth": "string|null",
+      "kyc_documents_id_image_url": "string|null",
+      "kyc_documents_face_image_url": "string|null",
+      "kyc_documents_selfie_image_url": "string|null",
+      "kyc_verification_verified_at": "string|null",
+      "kyc_emergency_contact_name": "string|null",
+      "kyc_emergency_contact_phone": "string|null",
+      "kyc_emergency_contact_relationship": "string|null",
+      "bank_name": "string|null",
+      "bank_account_name": "string|null",
+      "bank_account_number": "string|null",
+      "loan_amount": "number|null",
+      "loan_status": "string|null",
+      "loan_approved": "boolean|null",
+      "loan_interest": "number|null",
+      "loan_is_active": "boolean|null",
+      "loan_tenure_months": "number|null",
+      "loan_applied_amount": "number|null",
+      "loan_approved_amount": "number|null",
+      "loan_monthly_installment": "number|null",
+      "bills": "array"
+    }
+  },
+  "structure": {
+    "App": {
+      "providers": [
+        "AppProvider"
+      ],
+      "startup": [
+        "SplashScreen"
+      ],
+      "Auth": [
+        "LoginPage",
+        "RegisterPage",
+        "ForgotPasswordPage"
+      ],
+      "customer": [
+        "AppLayout",
+        "HomePage",
+        "LoanPage",
+        "BillsFullPage",
+        "ProfilePage",
+        "KycFullPage"
+      ],
+      "admin": [
+        "AdminScreen"
+      ],
+      "overlays": [
+        "Modal",
+        "BottomSheet",
+        "Dropdown",
+        "Toast",
+        "Alert",
+        "Confirmation",
+        "ActionSheet",
+        "Tooltip"
+      ]
+    },
+    "auth": {
+      "LoginPage": {
+        "fields": [
+          "phone",
+          "password"
+        ],
+        "actions": [
+          "LoginButton"
+        ]
+      },
+      "RegisterPage": {
+        "fields": [
+          "name",
+          "phone",
+          "email",
+          "password",
+          "pin"
+        ],
+        "actions": [
+          "RegisterButton"
+        ]
+      },
+      "ForgotPasswordPage": {
+        "fields": [
+          "phone",
+          "email"
+        ],
+        "actions": [
+          "ResetPasswordButton"
+        ]
+      }
+    },
+    "customer": {
+      "HomePage": {
+        "sections": [
+          "ProfileSection",
+          "BalanceSection",
+          "KycSection",
+          "LoanSection",
+          "BillsSection"
+        ]
+      },
+      "LoanPage": {
+        "fields": [
+          "loan_status",
+          "loan_approved",
+          "loan_is_active",
+          "loan_amount",
+          "loan_applied_amount",
+          "loan_approved_amount",
+          "loan_interest",
+          "loan_tenure_months",
+          "loan_monthly_installment"
+        ]
+      },
+      "BillsFullPage": {
+        "sections": [
+          "BillSummarySection",
+          "DuitNowSection",
+          "BankTransferSection"
+        ]
+      },
+      "ProfilePage": {
+        "sections": [
+          "ProfileSection",
+          "PersonalSection",
+          "BankSection",
+          "KycSection",
+          "AccountSection"
+        ]
+      },
+      "KycFullPage": {
+        "sections": [
+          "KycStatusSection",
+          "KycAddressSection",
+          "KycIdentitySection",
+          "KycDocumentsSection",
+          "KycVerificationSection",
+          "KycEmergencyContactSection"
+        ]
+      }
+    },
+    "admin": {
+      "AdminScreen": {
+        "views": [
+          "OverviewView",
+          "UserView",
+          "KycView",
+          "LoanView",
+          "BillsView"
+        ],
+        "navigation": "AdminBottomNav"
+      }
+    },
+    "type": "application_composition",
+    "source_of_truth": "architecture.canonical",
+    "note": "Defines screen/view composition only; hierarchy is governed by architecture.canonical."
+  },
+  "bills_schema": {
+    "type": "jsonb_array",
+    "path": "bills[]",
+    "item": {
+      "id": "string",
+      "phone": "string|null",
+      "amount": "number|null",
+      "status": "string|null",
+      "paid_at": "string|null",
+      "bill_name": "string|null",
+      "is_active": "boolean",
+      "duitnow_qr": {
+        "is_active": "boolean",
+        "qr_image_url": "string|null"
+      },
+      "transfer_bank": {
+        "bank_name": "string|null",
+        "is_active": "boolean",
+        "account_name": "string|null",
+        "account_number": "string|null"
+      }
+    },
+    "operations": [
+      "GET",
+      "POST",
+      "PATCH"
+    ],
+    "delete": false
+  },
+  "field_mapping": {
+    "kyc": {
+      "status": "kyc_status",
+      "is_verified": "kyc_is_verified",
+      "address.line": "kyc_address_line",
+      "address.city": "kyc_city",
+      "address.state": "kyc_state",
+      "address.postcode": "kyc_postcode",
+      "address.country": "kyc_country",
+      "identity.full_name": "kyc_identity_full_name",
+      "identity.gender": "kyc_identity_gender",
+      "identity.nationality": "kyc_identity_nationality",
+      "identity.id_type": "kyc_identity_id_type",
+      "identity.mykad_number": "kyc_identity_mykad_number",
+      "identity.date_of_birth": "kyc_identity_date_of_birth",
+      "documents.id_image_url": "kyc_documents_id_image_url",
+      "documents.face_image_url": "kyc_documents_face_image_url",
+      "documents.selfie_image_url": "kyc_documents_selfie_image_url",
+      "verification.verified_at": "kyc_verification_verified_at",
+      "emergency_contact.name": "kyc_emergency_contact_name",
+      "emergency_contact.phone": "kyc_emergency_contact_phone",
+      "emergency_contact.relationship": "kyc_emergency_contact_relationship"
+    },
+    "bank": {
+      "name": "bank_name",
+      "account_name": "bank_account_name",
+      "account_number": "bank_account_number"
+    },
+    "loan": {
+      "amount": "loan_amount",
+      "status": "loan_status",
+      "approved": "loan_approved",
+      "interest": "loan_interest",
+      "is_active": "loan_is_active",
+      "tenure_months": "loan_tenure_months",
+      "applied_amount": "loan_applied_amount",
+      "approved_amount": "loan_approved_amount",
+      "monthly_installment": "loan_monthly_installment"
+    }
+  },
+  "rules": {
+    "field_naming": "Use exact database/API field names",
+    "no_field_renaming": true,
+    "no_unrequested_fields": true,
+    "no_unrequested_sections": true,
+    "architecture": "Reference architecture.canonical hierarchy",
+    "bills": {
+      "type": "array",
+      "path": "bills[]"
+    },
+    "kyc": {
+      "status_field": "kyc_status",
+      "verified_field": "kyc_is_verified",
+      "verification_date_field": "kyc_verification_verified_at"
+    },
+    "sensitive_fields": {
+      "password": {
+        "sensitive": true,
+        "ui_exposure": false,
+        "client_state": false,
+        "local_storage": false,
+        "logs": false
+      },
+      "pin": {
+        "sensitive": true,
+        "ui_exposure": false,
+        "client_state": false,
+        "local_storage": false,
+        "logs": false
+      }
+    }
+  },
+  "component_inheritance": {
+    "enabled": true,
+    "strategy": "parent_then_child_override",
+    "resolution_order": [
+      "parent",
+      "child"
+    ],
+    "allowed_overrides": [
+      "visual_tokens",
+      "layout",
+      "spacing",
+      "typography",
+      "color",
+      "border",
+      "shadow",
+      "state",
+      "content_structure"
+    ],
+    "forbidden_overrides": [
+      "component_identity",
+      "parent_contract",
+      "security_rules",
+      "data_field_names",
+      "api_contract"
+    ],
+    "rules": [
+      "Parent component must exist before it can be extended.",
+      "Child inherits all parent properties unless explicitly overridden.",
+      "Child overrides apply only to properties declared in allowed_overrides.",
+      "Parent properties not overridden remain inherited.",
+      "No implicit inheritance is allowed.",
+      "Nested extends chains must resolve deterministically from root parent to final child."
+    ],
+    "components": {
+      "loan_summary_card": {
+        "extends": "card"
+      },
+      "bill_card": {
+        "extends": "card"
+      },
+      "kyc.status_card": {
+        "extends": "card"
+      },
+      "kyc.document_card": {
+        "extends": "card"
+      }
+    }
+  },
+  "architecture": {
+    "canonical": true,
+    "hierarchy": [
+      "App",
+      "Screen",
+      "Layout",
+      "Header / Content",
+      "View",
+      "Section",
+      "Block",
+      "Component",
+      "Element",
+      "Icon"
+    ],
+    "hierarchy_rules": [
+      "All application UI structures must follow the canonical hierarchy.",
+      "Screen represents a complete application screen.",
+      "Layout defines screen-level composition.",
+      "Header / Content are layout regions.",
+      "View groups related screen content.",
+      "Section groups related content within a View.",
+      "Block groups related UI elements within a Section.",
+      "Component is a reusable design-system unit.",
+      "Element is a primitive UI element within a Component.",
+      "Icon is a visual primitive and must not become an alternative hierarchy root."
+    ]
+  }
+}
