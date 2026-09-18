@@ -6,7 +6,6 @@
   "framework": "React",
   "language": "TypeScript",
   "bundler": "Vite",
-
   "design_reference": {
     "brand": "CIMB",
     "product": "Cash Plus Personal Loan",
@@ -29,7 +28,6 @@
       "form_style": "simple and highly readable"
     }
   },
-
   "app_shell": {
     "mode": "mobile-only",
     "max_width": "500px",
@@ -43,7 +41,6 @@
     "overflow": "hidden",
     "background": "var(--color-background)"
   },
-
   "global_layout": {
     "html": {
       "width": "100%",
@@ -78,7 +75,6 @@
       "WebkitOverflowScrolling": "touch"
     }
   },
-
   "colors": {
     "primary": "#C8102E",
     "primary_dark": "#A50D25",
@@ -86,20 +82,16 @@
     "primary_hover": "#B20E29",
     "secondary": "#1A1A1A",
     "secondary_light": "#4A4A4A",
-
     "background": "#F6F6F6",
     "surface": "#FFFFFF",
     "surface_secondary": "#FAFAFA",
-
     "text": "#1A1A1A",
     "text_secondary": "#5F6368",
     "text_muted": "#8A8A8A",
     "text_inverse": "#FFFFFF",
-
     "border": "#E1E1E1",
     "border_light": "#EEEEEE",
     "divider": "#EAEAEA",
-
     "success": "#16833B",
     "success_light": "#EAF7EE",
     "warning": "#C77700",
@@ -108,12 +100,10 @@
     "error_light": "#FDECEA",
     "info": "#1769AA",
     "info_light": "#EAF3FA",
-
     "overlay": "rgba(0, 0, 0, 0.45)",
     "disabled_background": "#EEEEEE",
     "disabled_text": "#999999"
   },
-
   "css_variables": {
     "--color-primary": "#C8102E",
     "--color-primary-dark": "#A50D25",
@@ -132,9 +122,27 @@
     "--color-warning": "#C77700",
     "--color-error": "#D93025",
     "--color-info": "#1769AA",
-    "--color-overlay": "rgba(0, 0, 0, 0.45)"
+    "--color-overlay": "rgba(0, 0, 0, 0.45)",
+    "--color-surface-secondary": "#FAFAFA",
+    "--color-success-light": "#EAF7EE",
+    "--color-warning-light": "#FFF4E5",
+    "--color-error-light": "#FDECEA",
+    "--color-info-light": "#EAF3FA",
+    "--radius-none": "0px",
+    "--radius-small": "6px",
+    "--radius-medium": "10px",
+    "--radius-large": "14px",
+    "--radius-xlarge": "18px",
+    "--radius-pill": "999px",
+    "--shadow-none": "none",
+    "--shadow-card": "0 1px 4px rgba(0, 0, 0, 0.08)",
+    "--shadow-elevated": "0 4px 16px rgba(0, 0, 0, 0.12)",
+    "--shadow-modal": "0 12px 40px rgba(0, 0, 0, 0.20)",
+    "--border-default": "1px solid var(--color-border)",
+    "--border-light": "1px solid var(--color-border-light)",
+    "--border-primary": "1px solid var(--color-primary)",
+    "--border-divider": "1px solid var(--color-divider)"
   },
-
   "typography": {
     "font_family": {
       "primary": "Arial, Helvetica, sans-serif",
@@ -201,7 +209,6 @@
       "font_weight": "700"
     }
   },
-
   "spacing": {
     "0": "0px",
     "1": "4px",
@@ -216,7 +223,6 @@
     "12": "48px",
     "16": "64px"
   },
-
   "radius": {
     "none": "0px",
     "small": "6px",
@@ -225,21 +231,18 @@
     "xlarge": "18px",
     "pill": "999px"
   },
-
   "shadow": {
     "none": "none",
     "card": "0 1px 4px rgba(0, 0, 0, 0.08)",
     "elevated": "0 4px 16px rgba(0, 0, 0, 0.12)",
     "modal": "0 12px 40px rgba(0, 0, 0, 0.20)"
   },
-
   "border": {
     "default": "1px solid var(--color-border)",
     "light": "1px solid var(--color-border-light)",
     "primary": "1px solid var(--color-primary)",
     "divider": "1px solid var(--color-divider)"
   },
-
   "page": {
     "background": "var(--color-background)",
     "padding_x": "16px",
@@ -247,7 +250,6 @@
     "padding_bottom": "24px",
     "content_gap": "16px"
   },
-
   "header": {
     "height": "56px",
     "padding_x": "16px",
@@ -272,7 +274,6 @@
       "background": "transparent"
     }
   },
-
   "bottom_navigation": {
     "height": "64px",
     "padding": "6px 8px",
@@ -297,7 +298,6 @@
       "font_weight": "700"
     }
   },
-
   "card": {
     "background": "var(--color-surface)",
     "border": "var(--border-light)",
@@ -305,7 +305,6 @@
     "padding": "16px",
     "box_shadow": "var(--shadow-card)"
   },
-
   "hero_card": {
     "background": "var(--color-primary)",
     "color": "var(--color-text-inverse)",
@@ -313,7 +312,6 @@
     "padding": "20px",
     "box_shadow": "var(--shadow-card)"
   },
-
   "loan_summary_card": {
     "extends": "card",
     "sections": [
@@ -332,7 +330,6 @@
       "font_weight": "700"
     }
   },
-
   "section": {
     "display": "flex",
     "flex_direction": "column",
@@ -352,7 +349,6 @@
       "color": "var(--color-text-secondary)"
     }
   },
-
   "form": {
     "display": "flex",
     "flex_direction": "column",
@@ -409,7 +405,6 @@
       "color": "var(--color-error)"
     }
   },
-
   "button": {
     "base": {
       "height": "48px",
@@ -450,7 +445,6 @@
       "width": "100%"
     }
   },
-
   "status": {
     "base": {
       "display": "inline-flex",
@@ -482,7 +476,6 @@
       "color": "var(--color-text-secondary)"
     }
   },
-
   "list": {
     "item": {
       "min_height": "56px",
@@ -493,7 +486,6 @@
       "border_bottom": "var(--border-light)"
     }
   },
-
   "avatar": {
     "small": "36px",
     "medium": "44px",
@@ -502,14 +494,12 @@
     "background": "var(--color-primary-light)",
     "object_fit": "cover"
   },
-
   "icon": {
     "small": "16px",
     "medium": "20px",
     "large": "24px",
     "stroke_width": "2"
   },
-
   "bill_card": {
     "extends": "card",
     "layout": "vertical",
@@ -529,7 +519,6 @@
       "padding": "12px"
     }
   },
-
   "kyc": {
     "status_card": {
       "extends": "card",
@@ -542,7 +531,6 @@
       "padding": "12px"
     }
   },
-
   "admin": {
     "background": "#F4F4F4",
     "overview_grid": {
@@ -557,7 +545,6 @@
       "padding": "14px"
     }
   },
-
   "overlay": {
     "backdrop": {
       "position": "fixed",
@@ -601,7 +588,6 @@
       "z_index": 110
     }
   },
-
   "loading": {
     "skeleton": {
       "background": "#E9E9E9",
@@ -618,30 +604,35 @@
       "min_height": "160px"
     }
   },
-
   "responsive": {
     "mobile": {
       "max_width": "500px",
-      "layout": "single-column"
+      "layout": "single-column",
+      "platform": "mobile"
     },
-    "desktop": {
+    "non_mobile_viewport": {
       "behavior": "preserve-mobile-layout",
       "container_max_width": "500px",
-      "margin": "0 auto"
-    }
+      "margin": "0 auto",
+      "no_desktop_redesign": true
+    },
+    "terminology": "viewport_handling_only"
   },
-
   "component_architecture": {
     "root": "App",
     "hierarchy": [
       "App",
-      "Page",
+      "Screen",
+      "Layout",
+      "Header",
+      "Content",
       "View",
       "Section",
       "Block",
       "Component",
       "Element",
-      "Icon"
+      "Icon",
+      "BottomNavigation"
     ],
     "application_structure": {
       "App": [
@@ -664,9 +655,27 @@
         "ProfilePage",
         "KycFullPage"
       ]
+    },
+    "overlay_hierarchy": [
+      "Overlay",
+      "Modal",
+      "BottomSheet",
+      "Dialog",
+      "Dropdown",
+      "Popover",
+      "Toast",
+      "Confirmation"
+    ],
+    "naming": {
+      "screen": "Screen or Page naming is allowed for existing components; new top-level screen definitions must use Screen as the canonical architectural layer.",
+      "view": "PascalCase + View suffix for view-level components.",
+      "section": "PascalCase + Section suffix for section-level components.",
+      "block": "PascalCase + Block suffix for block-level components.",
+      "component": "PascalCase component names.",
+      "element": "Semantic HTML or named UI element.",
+      "icon": "Named icon identifier."
     }
   },
-
   "navigation": {
     "customer": [
       {
@@ -709,7 +718,6 @@
       }
     ]
   },
-
   "data_display": {
     "currency": {
       "currency": "MYR",
@@ -729,7 +737,6 @@
       "locale": "en-MY"
     }
   },
-
   "accessibility": {
     "minimum_touch_target": "44px",
     "focus_visible": true,
@@ -737,9 +744,43 @@
     "semantic_html": true,
     "aria_labels": true,
     "color_only_status": false,
-    "form_labels_required": true
+    "form_labels_required": true,
+    "component_contract": {
+      "required_for_interactive_components": true,
+      "button": [
+        "accessible_name",
+        "44px_minimum_touch_target",
+        "disabled_state_when_applicable"
+      ],
+      "form_control": [
+        "label",
+        "validation_message_when_invalid",
+        "focus_feedback"
+      ],
+      "status": [
+        "semantic_status",
+        "not_color_only"
+      ],
+      "modal": [
+        "accessible_name",
+        "focus_management",
+        "dismissal_behavior"
+      ],
+      "bottom_sheet": [
+        "accessible_name",
+        "focus_management",
+        "dismissal_behavior"
+      ],
+      "dropdown": [
+        "accessible_name",
+        "keyboard_navigation_when_supported",
+        "selected_state"
+      ],
+      "toast": [
+        "appropriate_live_region_behavior"
+      ]
+    }
   },
-
   "interaction": {
     "transition": "150ms ease",
     "button_feedback": true,
@@ -749,28 +790,32 @@
     "focus_feedback": true,
     "disabled_feedback": true
   },
-
   "security_ui_rules": {
     "password": {
       "display": "masked",
       "persist": false,
       "local_storage": false,
-      "logs": false
+      "logs": false,
+      "api_response": false,
+      "plaintext_storage": false
     },
     "pin": {
       "display": "masked",
       "persist": false,
       "local_storage": false,
-      "logs": false
+      "logs": false,
+      "api_response": false,
+      "plaintext_storage": false
     },
     "mykad_number": {
-      "display": "masked_when_appropriate"
+      "display": "masked_when_appropriate",
+      "api_exposure": "authorized_only"
     },
     "bank_account_number": {
-      "display": "masked_when_appropriate"
+      "display": "masked_when_appropriate",
+      "api_exposure": "authorized_only"
     }
   },
-
   "implementation_rules": {
     "mobile_only": true,
     "max_width": "500px",
@@ -790,25 +835,29 @@
     "no_field_renaming": true,
     "no_mock_data": true,
     "no_fake_api": true,
-    "production_ready": true
+    "production_ready": true,
+    "api_contract_preservation": true,
+    "no_database_migration_without_approval": true,
+    "no_api_contract_change_without_approval": true,
+    "server_side_authorization_required": true,
+    "no_plaintext_credentials": true,
+    "undefined_css_variables_forbidden": true,
+    "undefined_design_tokens_forbidden": true
   },
-
   "app": {
     "name": "CIMB CashPlus",
     "version": "1.0.1",
     "framework": "React",
     "bundler": "Vite",
     "language": "TypeScript",
-    "architecture": "Page → View → Section → Element/Card"
+    "architecture": "App → Screen/Page → Layout → Header/Content → View → Section → Block → Component → Element → Icon"
   },
-
   "backend": {
     "provider": "Supabase",
     "schema": "public",
     "table": "cimb_users",
     "primary_key": "phone"
   },
-
   "api": {
     "users": {
       "service": "cimb-users",
@@ -969,7 +1018,6 @@
       }
     }
   },
-
   "database": {
     "table": "cimb_users",
     "columns": {
@@ -1018,7 +1066,6 @@
       "bills": "array"
     }
   },
-
   "structure": {
     "App": {
       "providers": [
@@ -1054,7 +1101,6 @@
         "Tooltip"
       ]
     },
-
     "auth": {
       "LoginPage": {
         "fields": [
@@ -1087,7 +1133,6 @@
         ]
       }
     },
-
     "customer": {
       "HomePage": {
         "sections": [
@@ -1138,7 +1183,6 @@
         ]
       }
     },
-
     "admin": {
       "AdminScreen": {
         "views": [
@@ -1152,7 +1196,6 @@
       }
     }
   },
-
   "bills_schema": {
     "type": "jsonb_array",
     "path": "bills[]",
@@ -1180,9 +1223,12 @@
       "POST",
       "PATCH"
     ],
-    "delete": false
+    "delete": false,
+    "naming": {
+      "canonical_item_field": "bill_name",
+      "rule": "Preserve existing field name; do not rename without separate approval."
+    }
   },
-
   "field_mapping": {
     "kyc": {
       "status": "kyc_status",
@@ -1223,13 +1269,12 @@
       "monthly_installment": "loan_monthly_installment"
     }
   },
-
   "rules": {
     "field_naming": "Use exact database/API field names",
     "no_field_renaming": true,
     "no_unrequested_fields": true,
     "no_unrequested_sections": true,
-    "architecture": "Page → View → Section → Block → Component → Element → Icon",
+    "architecture": "App → Screen/Page → Layout → Header/Content → View → Section → Block → Component → Element → Icon",
     "bills": {
       "type": "array",
       "path": "bills[]"
@@ -1254,6 +1299,202 @@
         "local_storage": false,
         "logs": false
       }
+    },
+    "architecture_contract": {
+      "canonical": "App → Screen/Page → Layout → Header/Content → View → Section → Block → Component → Element → Icon",
+      "single_source_of_truth": "component_architecture",
+      "legacy_page_naming": "Existing Page names are preserved as current component names; they do not define a second hierarchy."
     }
+  },
+  "mobile_only": true,
+  "production_readiness": {
+    "status": "target",
+    "evidence_required_for_final_pass": true
+  },
+  "token_contract": {
+    "traceability": "Component → Semantic Token → Primitive Token → CSS Variable",
+    "undefined_tokens": "ERROR",
+    "unused_tokens": "WARNING",
+    "hard_coded_values": "ALLOWED_ONLY_WHEN_COMPONENT_SPECIFIC",
+    "naming_convention": "kebab-case CSS custom properties prefixed with --"
+  },
+  "inheritance": {
+    "enabled": true,
+    "model": "Base Component → Extended Component → Variant → State",
+    "strategy": "deep_merge",
+    "override_rule": "child_wins",
+    "inherited_properties": [
+      "tokens",
+      "layout",
+      "visual",
+      "states",
+      "accessibility"
+    ],
+    "state_inheritance": "child may override inherited state definitions",
+    "token_inheritance": "child may override inherited token references",
+    "accessibility_inheritance": "inherited accessibility requirements remain mandatory unless explicitly overridden with a stricter requirement",
+    "unknown_parent": "ERROR"
+  },
+  "component_states": {
+    "default": true,
+    "pressed": true,
+    "active": true,
+    "focus": true,
+    "disabled": true,
+    "loading": true,
+    "error": true,
+    "success": true,
+    "empty": true,
+    "selected": true,
+    "validation": true,
+    "hover": {
+      "relevant_only": true,
+      "mobile_only_note": "Do not require hover-only interaction on touch-first mobile UI."
+    }
+  },
+  "api_state_contract": {
+    "states": [
+      "idle",
+      "loading",
+      "success",
+      "empty",
+      "error",
+      "timeout",
+      "retrying"
+    ],
+    "http_error_states": [
+      "unauthorized",
+      "forbidden",
+      "server_error"
+    ],
+    "retry": {
+      "allowed": true,
+      "strategy": "endpoint-specific",
+      "do_not_invent_retry_policy": true
+    },
+    "timeout": {
+      "required": true,
+      "duration": "endpoint-specific"
+    },
+    "response_contract": "Preserve existing API response shape unless explicitly approved."
+  },
+  "access_control": {
+    "principle": "UI visibility is not authorization",
+    "model": "Authenticated User → Role → Navigation Configuration; API authorization is independently enforced at the server/API layer",
+    "roles": [
+      "customer",
+      "admin"
+    ],
+    "navigation_is_authorization": false,
+    "server_enforcement_required": true,
+    "ownership": "API must enforce access to records based on authenticated identity and role.",
+    "sensitive_data": "API responses must exclude credentials and other sensitive fields unless explicitly required and authorized."
+  },
+  "security_data_contract": {
+    "credentials": {
+      "password": {
+        "classification": "authentication_credential",
+        "plaintext_storage": false,
+        "api_response": false,
+        "client_state": false,
+        "local_storage": false,
+        "logs": false
+      },
+      "pin": {
+        "classification": "authentication_credential",
+        "plaintext_storage": false,
+        "api_response": false,
+        "client_state": false,
+        "local_storage": false,
+        "logs": false
+      }
+    },
+    "sensitive_fields": {
+      "mykad_number": {
+        "classification": "sensitive_personal_data",
+        "display": "masked_when_appropriate",
+        "api_exposure": "authorized_only"
+      },
+      "bank_account_number": {
+        "classification": "sensitive_financial_data",
+        "display": "masked_when_appropriate",
+        "api_exposure": "authorized_only"
+      }
+    },
+    "frontend_secrets": false,
+    "service_role_keys": "server_only",
+    "access_tokens": "never_store_in_design_system_or_source",
+    "logging": "never log passwords, PINs, secrets, access tokens, or unnecessary sensitive personal/financial data"
+  },
+  "api_security_contract": {
+    "authentication": {
+      "required_for_sensitive_operations": true,
+      "existing_verify_jwt_configuration": "preserved_as_current_API_contract",
+      "mechanism_change": "requires_separate approval"
+    },
+    "authorization": {
+      "required_for_sensitive_operations": true,
+      "enforcement_layer": "server/API",
+      "navigation_visibility_is_not_authorization": true
+    },
+    "public_endpoints": {
+      "allowed": true,
+      "requirement": "Must explicitly document the endpoint as public and limit returned data to non-sensitive fields."
+    },
+    "cors": {
+      "existing_configuration": "preserved",
+      "security_review_required": true
+    }
+  },
+  "typography_contract": {
+    "semantic_first": true,
+    "rule": "Use semantic typography tokens before component-local literal values.",
+    "component_specific_values": "Allowed when documented by the component contract."
+  },
+  "spacing_contract": {
+    "semantic_first": true,
+    "rule": "Use spacing tokens before arbitrary literal spacing.",
+    "component_specific_values": "Allowed when documented by the component contract."
+  },
+  "data_contract": {
+    "primitive_types": "Preserve existing database/API types.",
+    "nullable": "Explicitly preserve existing nullable markers.",
+    "enums": "Only define allowed values when established by the existing contract.",
+    "required_optional": "Preserve existing required/optional API query semantics.",
+    "database_api_mapping": "Use field_mapping as the canonical mapping.",
+    "sensitive_response_fields": {
+      "password": "never_return",
+      "pin": "never_return",
+      "mykad_number": "authorized_only",
+      "bank_account_number": "authorized_only"
+    }
+  },
+  "data_state_ux": {
+    "lifecycle": [
+      "loading",
+      "success",
+      "empty",
+      "error"
+    ],
+    "network_states": [
+      "timeout",
+      "retry",
+      "unauthorized",
+      "forbidden",
+      "server_error"
+    ],
+    "rule": "Every data-driven screen must define applicable states; irrelevant states must be explicitly documented rather than omitted implicitly."
+  },
+  "database_contract": {
+    "schema_change_policy": "No migration, normalization, table split, field rename, or field deletion is defined by this design-system remediation.",
+    "current_schema_source_of_truth": "database.columns",
+    "field_names": "Preserve existing names exactly.",
+    "ownership": "Must be enforced by API/server layer for protected records.",
+    "sensitive_columns": [
+      "password",
+      "pin",
+      "kyc_identity_mykad_number",
+      "bank_account_number"
+    ]
   }
 }
