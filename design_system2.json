@@ -6,7 +6,6 @@
   "framework": "React",
   "language": "TypeScript",
   "bundler": "Vite",
-
   "design_reference": {
     "brand": "CIMB",
     "product": "Cash Plus Personal Loan",
@@ -29,7 +28,6 @@
       "form_style": "simple and highly readable"
     }
   },
-
   "app_shell": {
     "mode": "mobile-only",
     "max_width": "500px",
@@ -43,7 +41,6 @@
     "overflow": "hidden",
     "background": "var(--color-background)"
   },
-
   "global_layout": {
     "html": {
       "width": "100%",
@@ -78,7 +75,6 @@
       "WebkitOverflowScrolling": "touch"
     }
   },
-
   "colors": {
     "primary": "#C8102E",
     "primary_dark": "#A50D25",
@@ -86,20 +82,16 @@
     "primary_hover": "#B20E29",
     "secondary": "#1A1A1A",
     "secondary_light": "#4A4A4A",
-
     "background": "#F6F6F6",
     "surface": "#FFFFFF",
     "surface_secondary": "#FAFAFA",
-
     "text": "#1A1A1A",
     "text_secondary": "#5F6368",
     "text_muted": "#8A8A8A",
     "text_inverse": "#FFFFFF",
-
     "border": "#E1E1E1",
     "border_light": "#EEEEEE",
     "divider": "#EAEAEA",
-
     "success": "#16833B",
     "success_light": "#EAF7EE",
     "warning": "#C77700",
@@ -108,12 +100,10 @@
     "error_light": "#FDECEA",
     "info": "#1769AA",
     "info_light": "#EAF3FA",
-
     "overlay": "rgba(0, 0, 0, 0.45)",
     "disabled_background": "#EEEEEE",
     "disabled_text": "#999999"
   },
-
   "css_variables": {
     "--color-primary": "#C8102E",
     "--color-primary-dark": "#A50D25",
@@ -132,9 +122,29 @@
     "--color-warning": "#C77700",
     "--color-error": "#D93025",
     "--color-info": "#1769AA",
-    "--color-overlay": "rgba(0, 0, 0, 0.45)"
+    "--color-overlay": "rgba(0, 0, 0, 0.45)",
+    "--color-surface-secondary": "#FAFAFA",
+    "--color-success-light": "#EAF7EE",
+    "--color-warning-light": "#FFF4E5",
+    "--color-error-light": "#FDECEA",
+    "--color-info-light": "#EAF3FA",
+    "--color-disabled-background": "#EEEEEE",
+    "--color-disabled-text": "#999999",
+    "--radius-none": "0px",
+    "--radius-small": "6px",
+    "--radius-medium": "10px",
+    "--radius-large": "14px",
+    "--radius-xlarge": "18px",
+    "--radius-pill": "999px",
+    "--shadow-none": "none",
+    "--shadow-card": "0 1px 4px rgba(0, 0, 0, 0.08)",
+    "--shadow-elevated": "0 4px 16px rgba(0, 0, 0, 0.12)",
+    "--shadow-modal": "0 12px 40px rgba(0, 0, 0, 0.20)",
+    "--border-default": "1px solid var(--color-border)",
+    "--border-light": "1px solid var(--color-border-light)",
+    "--border-primary": "1px solid var(--color-primary)",
+    "--border-divider": "1px solid var(--color-divider)"
   },
-
   "typography": {
     "font_family": {
       "primary": "Arial, Helvetica, sans-serif",
@@ -201,7 +211,6 @@
       "font_weight": "700"
     }
   },
-
   "spacing": {
     "0": "0px",
     "1": "4px",
@@ -216,7 +225,6 @@
     "12": "48px",
     "16": "64px"
   },
-
   "radius": {
     "none": "0px",
     "small": "6px",
@@ -225,21 +233,18 @@
     "xlarge": "18px",
     "pill": "999px"
   },
-
   "shadow": {
     "none": "none",
     "card": "0 1px 4px rgba(0, 0, 0, 0.08)",
     "elevated": "0 4px 16px rgba(0, 0, 0, 0.12)",
     "modal": "0 12px 40px rgba(0, 0, 0, 0.20)"
   },
-
   "border": {
     "default": "1px solid var(--color-border)",
     "light": "1px solid var(--color-border-light)",
     "primary": "1px solid var(--color-primary)",
     "divider": "1px solid var(--color-divider)"
   },
-
   "page": {
     "background": "var(--color-background)",
     "padding_x": "16px",
@@ -247,7 +252,6 @@
     "padding_bottom": "24px",
     "content_gap": "16px"
   },
-
   "header": {
     "height": "56px",
     "padding_x": "16px",
@@ -272,7 +276,6 @@
       "background": "transparent"
     }
   },
-
   "bottom_navigation": {
     "height": "64px",
     "padding": "6px 8px",
@@ -297,7 +300,6 @@
       "font_weight": "700"
     }
   },
-
   "card": {
     "background": "var(--color-surface)",
     "border": "var(--border-light)",
@@ -305,7 +307,6 @@
     "padding": "16px",
     "box_shadow": "var(--shadow-card)"
   },
-
   "hero_card": {
     "background": "var(--color-primary)",
     "color": "var(--color-text-inverse)",
@@ -313,7 +314,6 @@
     "padding": "20px",
     "box_shadow": "var(--shadow-card)"
   },
-
   "loan_summary_card": {
     "extends": "card",
     "sections": [
@@ -332,7 +332,6 @@
       "font_weight": "700"
     }
   },
-
   "section": {
     "display": "flex",
     "flex_direction": "column",
@@ -352,7 +351,6 @@
       "color": "var(--color-text-secondary)"
     }
   },
-
   "form": {
     "display": "flex",
     "flex_direction": "column",
@@ -409,7 +407,6 @@
       "color": "var(--color-error)"
     }
   },
-
   "button": {
     "base": {
       "height": "48px",
@@ -450,7 +447,6 @@
       "width": "100%"
     }
   },
-
   "status": {
     "base": {
       "display": "inline-flex",
@@ -482,7 +478,6 @@
       "color": "var(--color-text-secondary)"
     }
   },
-
   "list": {
     "item": {
       "min_height": "56px",
@@ -493,7 +488,6 @@
       "border_bottom": "var(--border-light)"
     }
   },
-
   "avatar": {
     "small": "36px",
     "medium": "44px",
@@ -502,14 +496,12 @@
     "background": "var(--color-primary-light)",
     "object_fit": "cover"
   },
-
   "icon": {
     "small": "16px",
     "medium": "20px",
     "large": "24px",
     "stroke_width": "2"
   },
-
   "bill_card": {
     "extends": "card",
     "layout": "vertical",
@@ -529,7 +521,6 @@
       "padding": "12px"
     }
   },
-
   "kyc": {
     "status_card": {
       "extends": "card",
@@ -542,7 +533,6 @@
       "padding": "12px"
     }
   },
-
   "admin": {
     "background": "#F4F4F4",
     "overview_grid": {
@@ -557,7 +547,6 @@
       "padding": "14px"
     }
   },
-
   "overlay": {
     "backdrop": {
       "position": "fixed",
@@ -601,7 +590,6 @@
       "z_index": 110
     }
   },
-
   "loading": {
     "skeleton": {
       "background": "#E9E9E9",
@@ -618,7 +606,6 @@
       "min_height": "160px"
     }
   },
-
   "responsive": {
     "mobile": {
       "max_width": "500px",
@@ -630,12 +617,13 @@
       "margin": "0 auto"
     }
   },
-
   "component_architecture": {
     "root": "App",
     "hierarchy": [
       "App",
-      "Page",
+      "Screen",
+      "Layout",
+      "Header / Content",
       "View",
       "Section",
       "Block",
@@ -664,9 +652,9 @@
         "ProfilePage",
         "KycFullPage"
       ]
-    }
+    },
+    "hierarchy_source": "architecture.canonical"
   },
-
   "navigation": {
     "customer": [
       {
@@ -709,7 +697,6 @@
       }
     ]
   },
-
   "data_display": {
     "currency": {
       "currency": "MYR",
@@ -729,7 +716,6 @@
       "locale": "en-MY"
     }
   },
-
   "accessibility": {
     "minimum_touch_target": "44px",
     "focus_visible": true,
@@ -739,7 +725,6 @@
     "color_only_status": false,
     "form_labels_required": true
   },
-
   "interaction": {
     "transition": "150ms ease",
     "button_feedback": true,
@@ -749,7 +734,6 @@
     "focus_feedback": true,
     "disabled_feedback": true
   },
-
   "security_ui_rules": {
     "password": {
       "display": "masked",
@@ -770,7 +754,6 @@
       "display": "masked_when_appropriate"
     }
   },
-
   "implementation_rules": {
     "mobile_only": true,
     "max_width": "500px",
@@ -792,23 +775,20 @@
     "no_fake_api": true,
     "production_ready": true
   },
-
   "app": {
     "name": "CIMB CashPlus",
     "version": "1.0.1",
     "framework": "React",
     "bundler": "Vite",
     "language": "TypeScript",
-    "architecture": "Page → View → Section → Element/Card"
+    "architecture": "architecture.canonical"
   },
-
   "backend": {
     "provider": "Supabase",
     "schema": "public",
     "table": "cimb_users",
     "primary_key": "phone"
   },
-
   "api": {
     "users": {
       "service": "cimb-users",
@@ -969,7 +949,6 @@
       }
     }
   },
-
   "database": {
     "table": "cimb_users",
     "columns": {
@@ -1018,7 +997,6 @@
       "bills": "array"
     }
   },
-
   "structure": {
     "App": {
       "providers": [
@@ -1054,7 +1032,6 @@
         "Tooltip"
       ]
     },
-
     "auth": {
       "LoginPage": {
         "fields": [
@@ -1087,7 +1064,6 @@
         ]
       }
     },
-
     "customer": {
       "HomePage": {
         "sections": [
@@ -1138,7 +1114,6 @@
         ]
       }
     },
-
     "admin": {
       "AdminScreen": {
         "views": [
@@ -1150,9 +1125,11 @@
         ],
         "navigation": "AdminBottomNav"
       }
-    }
+    },
+    "type": "application_composition",
+    "source_of_truth": "architecture.canonical",
+    "note": "Defines screen/view composition only; hierarchy is governed by architecture.canonical."
   },
-
   "bills_schema": {
     "type": "jsonb_array",
     "path": "bills[]",
@@ -1182,7 +1159,6 @@
     ],
     "delete": false
   },
-
   "field_mapping": {
     "kyc": {
       "status": "kyc_status",
@@ -1223,13 +1199,12 @@
       "monthly_installment": "loan_monthly_installment"
     }
   },
-
   "rules": {
     "field_naming": "Use exact database/API field names",
     "no_field_renaming": true,
     "no_unrequested_fields": true,
     "no_unrequested_sections": true,
-    "architecture": "Page → View → Section → Block → Component → Element → Icon",
+    "architecture": "Reference architecture.canonical hierarchy",
     "bills": {
       "type": "array",
       "path": "bills[]"
@@ -1255,5 +1230,80 @@
         "logs": false
       }
     }
+  },
+  "component_inheritance": {
+    "enabled": true,
+    "strategy": "parent_then_child_override",
+    "resolution_order": [
+      "parent",
+      "child"
+    ],
+    "allowed_overrides": [
+      "visual_tokens",
+      "layout",
+      "spacing",
+      "typography",
+      "color",
+      "border",
+      "shadow",
+      "state",
+      "content_structure"
+    ],
+    "forbidden_overrides": [
+      "component_identity",
+      "parent_contract",
+      "security_rules",
+      "data_field_names",
+      "api_contract"
+    ],
+    "rules": [
+      "Parent component must exist before it can be extended.",
+      "Child inherits all parent properties unless explicitly overridden.",
+      "Child overrides apply only to properties declared in allowed_overrides.",
+      "Parent properties not overridden remain inherited.",
+      "No implicit inheritance is allowed.",
+      "Nested extends chains must resolve deterministically from root parent to final child."
+    ],
+    "components": {
+      "loan_summary_card": {
+        "extends": "card"
+      },
+      "bill_card": {
+        "extends": "card"
+      },
+      "kyc.status_card": {
+        "extends": "card"
+      },
+      "kyc.document_card": {
+        "extends": "card"
+      }
+    }
+  },
+  "architecture": {
+    "canonical": true,
+    "hierarchy": [
+      "App",
+      "Screen",
+      "Layout",
+      "Header / Content",
+      "View",
+      "Section",
+      "Block",
+      "Component",
+      "Element",
+      "Icon"
+    ],
+    "hierarchy_rules": [
+      "All application UI structures must follow the canonical hierarchy.",
+      "Screen represents a complete application screen.",
+      "Layout defines screen-level composition.",
+      "Header / Content are layout regions.",
+      "View groups related screen content.",
+      "Section groups related content within a View.",
+      "Block groups related UI elements within a Section.",
+      "Component is a reusable design-system unit.",
+      "Element is a primitive UI element within a Component.",
+      "Icon is a visual primitive and must not become an alternative hierarchy root."
+    ]
   }
 }
