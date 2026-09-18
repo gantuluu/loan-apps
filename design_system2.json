@@ -594,49 +594,57 @@
       "max_width": "500px",
       "layout": "single-column"
     },
-    "desktop": {
+    "large_viewport": {
       "behavior": "preserve-mobile-layout",
       "container_max_width": "500px",
-      "margin": "0 auto"
+      "margin": "0 auto",
+      "no_desktop_redesign": true,
+      "no_desktop_specific_layout": true
     }
   },
   "component_architecture": {
     "root": "App",
-    "hierarchy": [
-      "App",
-      "Screen",
-      "Layout",
-      "Header / Content",
-      "View",
-      "Section",
-      "Block",
-      "Component",
-      "Element",
-      "Icon"
-    ],
+    "hierarchy_source": "architecture.canonical",
     "application_structure": {
       "App": [
         "AppProvider",
+        "AppShell"
+      ],
+      "AppShell": [
         "SplashScreen",
         "Auth",
-        "AppLayout",
-        "AdminScreen",
+        "AuthenticatedApp",
         "OverlayProvider"
+      ],
+      "Auth": [
+        "LoginPage",
+        "RegisterPage",
+        "ForgotPasswordPage"
+      ],
+      "AuthenticatedApp": [
+        "CustomerApp",
+        "AdminApp"
+      ],
+      "CustomerApp": [
+        "AppLayout"
+      ],
+      "AdminApp": [
+        "AdminLayout"
       ],
       "AppLayout": [
         "AppHeader",
         "MainContent",
         "BottomNavigation"
       ],
+      "AdminLayout": [
+        "AppHeader",
+        "MainContent",
+        "AdminBottomNavigation"
+      ],
       "MainContent": [
-        "HomePage",
-        "LoanPage",
-        "BillsFullPage",
-        "ProfilePage",
-        "KycFullPage"
+        "ActiveView"
       ]
-    },
-    "hierarchy_source": "architecture.canonical"
+    }
   },
   "navigation": {
     "customer": [
@@ -776,7 +784,36 @@
     "no_field_renaming": true,
     "no_mock_data": true,
     "no_fake_api": true,
-    "production_ready": true
+    "production_ready": true,
+    "runtime_architecture": {
+      "app_state_flow": [
+        "AppProvider initializes application state.",
+        "AppShell renders exactly one startup or authentication/application state at a time.",
+        "SplashScreen is mutually exclusive with Auth and AuthenticatedApp.",
+        "AuthenticatedApp renders exactly one role application at a time: CustomerApp or AdminApp.",
+        "CustomerApp uses AppLayout.",
+        "AdminApp uses AdminLayout.",
+        "MainContent renders exactly one active View at a time.",
+        "Header and BottomNavigation remain outside main and do not participate in main scrolling.",
+        "main is the only primary vertical scroll container for authenticated application content."
+      ],
+      "layout_contract": {
+        "root_source_of_truth": "global_layout.#root",
+        "runtime_structure": [
+          "Header",
+          "main",
+          "BottomNavigation"
+        ],
+        "main_source_of_truth": "global_layout.main"
+      },
+      "architecture_sources": {
+        "hierarchy": "architecture.canonical",
+        "component_inheritance": "component_inheritance",
+        "root_layout": "global_layout.#root",
+        "main_layout": "global_layout.main",
+        "screen_composition": "structure"
+      }
+    }
   },
   "app": {
     "name": "CIMB CashPlus",
@@ -1005,25 +1042,7 @@
       "providers": [
         "AppProvider"
       ],
-      "startup": [
-        "SplashScreen"
-      ],
-      "Auth": [
-        "LoginPage",
-        "RegisterPage",
-        "ForgotPasswordPage"
-      ],
-      "customer": [
-        "AppLayout",
-        "HomePage",
-        "LoanPage",
-        "BillsFullPage",
-        "ProfilePage",
-        "KycFullPage"
-      ],
-      "admin": [
-        "AdminScreen"
-      ],
+      "shell": "AppShell",
       "overlays": [
         "Modal",
         "BottomSheet",
@@ -1034,6 +1053,18 @@
         "ActionSheet",
         "Tooltip"
       ]
+    },
+    "AppShell": {
+      "startup": [
+        "SplashScreen"
+      ],
+      "unauthenticated": [
+        "Auth"
+      ],
+      "authenticated": [
+        "AuthenticatedApp"
+      ],
+      "overlay_provider": "OverlayProvider"
     },
     "auth": {
       "LoginPage": {
@@ -1067,7 +1098,33 @@
         ]
       }
     },
+    "authenticated": {
+      "CustomerApp": {
+        "layout": "AppLayout",
+        "active_view_source": "navigation.customer"
+      },
+      "AdminApp": {
+        "layout": "AdminLayout",
+        "active_view_source": "navigation.admin"
+      }
+    },
     "customer": {
+      "AppLayout": {
+        "regions": {
+          "header": "AppHeader",
+          "content": "MainContent",
+          "navigation": "BottomNavigation"
+        }
+      },
+      "MainContent": {
+        "active_view": [
+          "HomePage",
+          "LoanPage",
+          "BillsFullPage",
+          "ProfilePage",
+          "KycFullPage"
+        ]
+      },
       "HomePage": {
         "sections": [
           "ProfileSection",
@@ -1118,17 +1175,36 @@
       }
     },
     "admin": {
-      "AdminScreen": {
-        "views": [
+      "AdminLayout": {
+        "regions": {
+          "header": "AppHeader",
+          "content": "MainContent",
+          "navigation": "AdminBottomNavigation"
+        }
+      },
+      "MainContent": {
+        "active_view": [
           "OverviewView",
           "UserView",
           "KycView",
           "LoanView",
           "BillsView"
-        ],
-        "navigation": "AdminBottomNav"
+        ]
+      },
+      "AdminScreen": {
+        "layout": "AdminLayout"
       }
     },
+    "overlays": [
+      "Modal",
+      "BottomSheet",
+      "Dropdown",
+      "Toast",
+      "Alert",
+      "Confirmation",
+      "ActionSheet",
+      "Tooltip"
+    ],
     "type": "application_composition",
     "source_of_truth": "architecture.canonical",
     "note": "Defines screen/view composition only; hierarchy is governed by architecture.canonical."
@@ -1288,7 +1364,7 @@
       "App",
       "Screen",
       "Layout",
-      "Header / Content",
+      "Region",
       "View",
       "Section",
       "Block",
@@ -1298,15 +1374,17 @@
     ],
     "hierarchy_rules": [
       "All application UI structures must follow the canonical hierarchy.",
-      "Screen represents a complete application screen.",
+      "App is the application root.",
+      "Screen represents a complete application screen or application-level state surface.",
       "Layout defines screen-level composition.",
-      "Header / Content are layout regions.",
-      "View groups related screen content.",
+      "Region defines a structural layout area such as Header, Content, or Navigation.",
+      "View groups the active content rendered inside a Content Region.",
       "Section groups related content within a View.",
       "Block groups related UI elements within a Section.",
       "Component is a reusable design-system unit.",
       "Element is a primitive UI element within a Component.",
-      "Icon is a visual primitive and must not become an alternative hierarchy root."
+      "Icon is a visual primitive and must not become an alternative hierarchy root.",
+      "Header, Content, and Navigation are Regions and must not be interpreted as a single hierarchy node."
     ]
   }
 }
