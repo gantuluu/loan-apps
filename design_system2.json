@@ -265,9 +265,14 @@
     "background": "var(--color-surface)",
     "border_top": "var(--border-light)",
     "display": "grid",
-    "grid_template_columns": "repeat(4, 1fr)",
     "position": "relative",
     "z_index": 30,
+    "customer": {
+      "grid_template_columns": "repeat(4, 1fr)"
+    },
+    "admin": {
+      "grid_template_columns": "repeat(5, 1fr)"
+    },
     "item": {
       "display": "flex",
       "flex_direction": "column",
@@ -534,6 +539,9 @@
     "backdrop": {
       "position": "fixed",
       "inset": "0",
+      "display": "flex",
+      "align_items": "center",
+      "justify_content": "center",
       "background": "var(--color-overlay)",
       "z_index": 100
     },
@@ -541,7 +549,7 @@
       "position": "relative",
       "width": "calc(100% - 32px)",
       "max_width": "460px",
-      "margin": "auto",
+      "margin": "0",
       "background": "var(--color-surface)",
       "border_radius": "var(--radius-xlarge)",
       "padding": "20px",
@@ -566,6 +574,7 @@
       "z_index": 120
     },
     "dropdown": {
+      "position": "absolute",
       "background": "var(--color-surface)",
       "border": "var(--border-light)",
       "border_radius": "var(--radius-medium)",
@@ -650,41 +659,50 @@
     "customer": [
       {
         "label": "Home",
-        "icon": "home"
+        "icon": "home",
+        "target": "HomePage"
       },
       {
         "label": "Loan",
-        "icon": "wallet"
+        "icon": "wallet",
+        "target": "LoanPage"
       },
       {
         "label": "Bills",
-        "icon": "receipt"
+        "icon": "receipt",
+        "target": "BillsFullPage"
       },
       {
         "label": "Profile",
-        "icon": "user"
+        "icon": "user",
+        "target": "ProfilePage"
       }
     ],
     "admin": [
       {
         "label": "Overview",
-        "icon": "dashboard"
+        "icon": "dashboard",
+        "target": "OverviewView"
       },
       {
         "label": "Users",
-        "icon": "users"
+        "icon": "users",
+        "target": "UserView"
       },
       {
         "label": "KYC",
-        "icon": "shield-check"
+        "icon": "shield-check",
+        "target": "KycView"
       },
       {
         "label": "Loan",
-        "icon": "wallet"
+        "icon": "wallet",
+        "target": "LoanView"
       },
       {
         "label": "Bills",
-        "icon": "receipt"
+        "icon": "receipt",
+        "target": "BillsView"
       }
     ]
   },
@@ -697,7 +715,12 @@
     },
     "date": {
       "locale": "en-MY",
-      "format": "DD MMM YYYY"
+      "formatter": "Intl.DateTimeFormat",
+      "options": {
+        "day": "2-digit",
+        "month": "short",
+        "year": "numeric"
+      }
     },
     "phone": {
       "country": "MY",
@@ -813,6 +836,18 @@
         "main_layout": "global_layout.main",
         "screen_composition": "structure"
       }
+    },
+    "generator_contract": {
+      "target": "React + TypeScript + Vite",
+      "deployment": "Vercel",
+      "must_validate_before_generation": true,
+      "must_not_invent_routes": true,
+      "must_not_invent_api_endpoints": true,
+      "must_not_invent_components_for_missing_contracts": true,
+      "navigation_target_source": "navigation",
+      "active_view_source": "structure",
+      "runtime_layout_source": "implementation_rules.runtime_architecture.layout_contract",
+      "unresolved_contract_behavior": "stop_and_report_missing_contract"
     }
   },
   "app": {
@@ -984,6 +1019,21 @@
                 "alternative": "body.bill_id"
               }
             }
+          }
+        }
+      },
+      "auth_contract": {
+        "status": "contract_required",
+        "rule": "Login, registration, and password-reset actions must not invent endpoints. Implement only when a corresponding backend contract is supplied.",
+        "actions": {
+          "LoginButton": {
+            "required_api_operation": "login"
+          },
+          "RegisterButton": {
+            "required_api_operation": "register"
+          },
+          "ResetPasswordButton": {
+            "required_api_operation": "reset_password"
           }
         }
       }
@@ -1386,5 +1436,16 @@
       "Icon is a visual primitive and must not become an alternative hierarchy root.",
       "Header, Content, and Navigation are Regions and must not be interpreted as a single hierarchy node."
     ]
+  },
+  "deployment": {
+    "platform": "Vercel",
+    "framework": "Vite",
+    "package_manager": "npm",
+    "build_command": "npm run build",
+    "output_directory": "dist",
+    "development_command": "npm run dev",
+    "preview_command": "npm run preview",
+    "spa_fallback": "required_when_client_side_routing_is_used",
+    "vercel_config_rule": "Do not add a vercel.json unless required by the selected routing strategy."
   }
 }
